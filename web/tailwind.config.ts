@@ -8,10 +8,23 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      fontFamily: {
+        sans: "var(--font-inter)",
+      },
+      keyframes: {
+        "slide-up": {
+          from: { opacity: "1", transform: "translateY(2px)" },
+          to: { opacity: "0", transform: "translateY(0)" },
+        },
+
+        "slide-down": {
+          from: { opacity: "0", transform: "translateY(-2px)" },
+          to: { opacity: "1", transform: "translateY(0)" },
+        },
+      },
+      animation: {
+        "slide-up": "slide-up 400ms cubic-bezier(0.16, 1, 0.3, 1)",
+        "slide-down": "slide-down 400ms cubic-bezier(0.16, 1, 0.3, 1)",
       },
     },
   },

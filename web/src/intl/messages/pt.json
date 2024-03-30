@@ -1,0 +1,19 @@
+{
+  "locales": {
+    "english": "Inglês",
+    "brazilian-portuguese": "Português (BR)"
+  },
+  "header-menu": {
+    "home": "Início",
+    "collections": "Coleções",
+    "about": "Sobre",
+    "contact": "Contato"
+  },
+  "footer": {
+    "navigation": {
+      "about": "Sobre",
+      "contact": "Contato"
+    },
+    "development": "Desenvolvido por:"
+  }
+}

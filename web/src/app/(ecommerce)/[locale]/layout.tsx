@@ -1,0 +1,36 @@
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import "../../globals.css";
+import { Header } from "@/components/ecommerce/header";
+import { Footer } from "@/components/ecommerce/footer";
+
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+
+export const metadata: Metadata = {
+  title: "Intelli Project",
+};
+
+export default function LocaleLayout({
+  children,
+  params: { locale },
+}: Readonly<{
+  children: React.ReactNode;
+  params: {
+    locale: string;
+  };
+}>) {
+  return (
+    <html
+      lang={locale}
+      className={inter.variable}
+    >
+      <body className="scroll-smooth antialiased">
+        <Header />
+        <main className="min-h-[calc(100vh-129px)] pt-20 lg:pt-28">
+          {children}
+        </main>
+        <Footer />
+      </body>
+    </html>
+  );
+}
