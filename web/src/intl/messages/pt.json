@@ -1,19 +1,28 @@
 {
-  "locales": {
-    "english": "Inglês",
-    "brazilian-portuguese": "Português (BR)"
-  },
-  "header-menu": {
-    "home": "Início",
-    "collections": "Coleções",
-    "about": "Sobre",
-    "contact": "Contato"
-  },
-  "footer": {
-    "navigation": {
+  "globals": {
+    "locales": {
+      "english": "Inglês",
+      "brazilian-portuguese": "Português (BR)"
+    },
+    "header-menu": {
+      "home": "Início",
+      "collections": "Coleções",
       "about": "Sobre",
       "contact": "Contato"
     },
-    "development": "Desenvolvido por:"
+    "newsletter": {
+      "description": "Receba atualizações dos seus produtos favoritos",
+      "form": {
+        "placeholder": "Seu melhor E-mail",
+        "submit": "Inscrever-se"
+      }
+    },
+    "footer": {
+      "navigation": {
+        "about": "Sobre",
+        "contact": "Contato"
+      },
+      "development": "Desenvolvido por:"
+    }
   }
 }

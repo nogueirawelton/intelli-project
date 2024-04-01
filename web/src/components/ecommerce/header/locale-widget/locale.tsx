@@ -1,3 +1,5 @@
+"use client";
+
 import { usePathname, useRouter } from "@/intl/navigation";
 import Image from "next/image";
 

@@ -4,22 +4,15 @@ import * as Popover from "@radix-ui/react-popover";
 import { ChevronDown } from "lucide-react";
 import Image from "next/image";
 import { useParams } from "next/navigation";
-import { Locale } from "./locale";
+import { ReactNode } from "react";
 
-interface LocaleWidgetProps {
-  locales: Array<{
-    name: string;
-    code: string;
-  }>;
-}
-
-export function LocaleWidget({ locales }: LocaleWidgetProps) {
+export function LocaleWidget({ children }: { children: ReactNode }) {
   const { locale }: { locale: string } = useParams();
 
   return (
     <Popover.Root>
-      <Popover.Trigger className="group flex h-28 items-center gap-2">
-        <div className="h-10 w-10 rounded-full overflow-hidden">
+      <Popover.Trigger className="group hidden lg:flex h-28 items-center gap-1">
+        <div className="h-8 w-8 rounded-full overflow-hidden">
           <Image
             src={`/img/locales/${locale}.jpg`}
             height={128}
@@ -34,15 +27,7 @@ export function LocaleWidget({ locales }: LocaleWidgetProps) {
 
       <Popover.Portal>
         <Popover.Content className="bg-white shadow-md data-[state=open]:animate-slide-down data-[state=closed]:animate-slide-up">
-          <div>
-            {locales.map(({ name, code }) => (
-              <Locale
-                key={code}
-                name={name}
-                code={code}
-              />
-            ))}
-          </div>
+          {children}
         </Popover.Content>
       </Popover.Portal>
     </Popover.Root>

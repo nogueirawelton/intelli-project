@@ -2,11 +2,11 @@ import { useTranslations } from "next-intl";
 import Link from "next/link";
 
 export function Footer() {
-  const t = useTranslations("footer");
+  const t = useTranslations("globals.footer");
 
   return (
     <footer className="px-4 md:px-8 border-t border-zinc-200">
-      <div className="lg:h-32 py-8 lg:py-0 flex flex-col lg:flex-row max-w-screen-2xl mx-auto lg:items-center gap-4 justify-center lg:justify-between">
+      <div className="lg:h-28 py-8 lg:py-0 flex flex-col lg:flex-row max-w-screen-2xl mx-auto lg:items-center gap-4 justify-center lg:justify-between">
         <div className="flex flex-col md:flex-row lg:items-center gap-4 lg:gap-16">
           <strong className="text-zinc-800">© 2024 IntelliProject</strong>
 
@@ -32,7 +32,7 @@ export function Footer() {
           </nav>
         </div>
 
-        <span className="text-sm text-zinc-600">
+        <span className="text-sm text-zinc-600 pr-20">
           {`${t("development")} `}
           <Link
             href="https://github.com/Renan-Gust"

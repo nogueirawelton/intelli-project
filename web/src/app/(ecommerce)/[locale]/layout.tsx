@@ -3,6 +3,8 @@ import { Inter } from "next/font/google";
 import "../../globals.css";
 import { Header } from "@/components/ecommerce/header";
 import { Footer } from "@/components/ecommerce/footer";
+import { IntelliChat } from "@/components/ecommerce/intelli-chat";
+import { Newsletter } from "@/components/ecommerce/newsletter";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
@@ -26,10 +28,14 @@ export default function LocaleLayout({
     >
       <body className="scroll-smooth antialiased">
         <Header />
+
         <main className="min-h-[calc(100vh-129px)] pt-20 lg:pt-28">
           {children}
         </main>
+
+        <Newsletter />
         <Footer />
+        <IntelliChat />
       </body>
     </html>
   );

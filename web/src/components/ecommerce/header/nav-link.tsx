@@ -10,7 +10,7 @@ export function NavLink(props: ComponentProps<typeof Link>) {
     <Link
       {...props}
       data-current={pathname == props.href}
-      className="uppercase data-[current=true]:text-white text-zinc-200 font-bold hover:text-white transition-colors duration-500"
+      className="uppercase lg:h-28 flex items-center data-[current=true]:text-white text-zinc-200 font-bold hover:text-white transition-colors duration-500"
     />
   );
 }

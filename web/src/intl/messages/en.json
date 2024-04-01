@@ -1,19 +1,28 @@
 {
-  "locales": {
-    "english": "English",
-    "brazilian-portuguese": "Portuguese (BR)"
-  },
-  "header-menu": {
-    "home": "Home",
-    "collections": "Collections",
-    "about": "About",
-    "contact": "Contact"
-  },
-  "footer": {
-    "navigation": {
+  "globals": {
+    "locales": {
+      "english": "English",
+      "brazilian-portuguese": "Portuguese (BR)"
+    },
+    "header-menu": {
+      "home": "Home",
+      "collections": "Collections",
       "about": "About",
       "contact": "Contact"
     },
-    "development": "Developed by:"
+    "newsletter": {
+      "description": "Receive your favorite products",
+      "form": {
+        "placeholder": "Your best E-mail",
+        "submit": "Subscribe"
+      }
+    },
+    "footer": {
+      "navigation": {
+        "about": "About",
+        "contact": "Contact"
+      },
+      "development": "Developed by:"
+    }
   }
 }
