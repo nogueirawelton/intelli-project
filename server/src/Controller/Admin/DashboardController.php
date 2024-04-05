@@ -5,11 +5,9 @@ namespace App\Controller\Admin;
 use App\Entity\User;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Dashboard;
 use EasyCorp\Bundle\EasyAdminBundle\Config\MenuItem;
-use EasyCorp\Bundle\EasyAdminBundle\Config\UserMenu;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractDashboardController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-use Symfony\Component\Security\Core\User\UserInterface;
 
 class DashboardController extends AbstractDashboardController
 {
@@ -34,7 +32,7 @@ class DashboardController extends AbstractDashboardController
         //
         // return $this->render('some/path/my-dashboard.html.twig');
 
-        return $this->render('admin/dashboard.twig');
+        return $this->render('admin/dashboard.html.twig');
     }
 
     public function configureDashboard(): Dashboard
@@ -47,7 +45,7 @@ class DashboardController extends AbstractDashboardController
             // "as is" to the Twig asset() function:
             // <link rel="shortcut icon" href="{{ asset('...') }}">
             ->setFaviconPath('favicon.svg');
-            // ->renderSidebarMinimized()
+        // ->renderSidebarMinimized()
     }
 
     public function configureMenuItems(): iterable

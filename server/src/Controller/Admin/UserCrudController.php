@@ -9,7 +9,6 @@ use EasyCorp\Bundle\EasyAdminBundle\Config\Crud;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 use EasyCorp\Bundle\EasyAdminBundle\Field\DateTimeField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\EmailField;
-use EasyCorp\Bundle\EasyAdminBundle\Field\FormField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\IdField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
 
@@ -20,7 +19,6 @@ class UserCrudController extends AbstractCrudController
         return User::class;
     }
 
-    
     public function configureFields(string $pageName): iterable
     {
         return [
@@ -45,18 +43,6 @@ class UserCrudController extends AbstractCrudController
         return $actions
             ->update(Crud::PAGE_INDEX, Action::NEW, function(Action $action) {
                 return $action->setIcon('fa fa-user-plus')->setLabel('Adicionar usuário');
-            })
-            ->update(Crud::PAGE_INDEX, Action::EDIT, function(Action $action) {
-                return $action->setLabel('Editar');
-            })
-            ->update(Crud::PAGE_INDEX, Action::DELETE, function(Action $action) {
-                return $action->setLabel('Deletar');
-            })
-            ->update(Crud::PAGE_EDIT, Action::SAVE_AND_CONTINUE, function(Action $action) {
-                return $action->setLabel('Salvar e continuar editando');
-            })
-            ->update(Crud::PAGE_EDIT, Action::SAVE_AND_RETURN, function(Action $action) {
-                return $action->setLabel('Salvar');
             })
         ;
     }

@@ -21,6 +21,9 @@ $ php bin/console doctrine:migrations:migrate
 ```
 
 ### Criar usuário admin
+```bash
+$ php bin/console doctrine:fixtures:load
+```
 
 ### Rode a projeto:
 ```bash
@@ -28,6 +31,10 @@ $ php -S localhost:8000 -t public
 ```
 
 O projeto estará disponível pelo endereço http://localhost:8000
+
+### Usuário admin
+> login: admin@intellichat.com
+> senha: admin
 
 ## Como fazer manutenção do projeto
 
