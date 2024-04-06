@@ -11,7 +11,10 @@ export function LocaleWidget({ children }: { children: ReactNode }) {
 
   return (
     <Popover.Root>
-      <Popover.Trigger className="group hidden lg:flex h-28 items-center gap-1">
+      <Popover.Trigger
+        data-current-locale={locale}
+        className="group hidden lg:flex h-28 items-center gap-1"
+      >
         <div className="h-8 w-8 rounded-full overflow-hidden">
           <Image
             src={`/img/locales/${locale}.jpg`}

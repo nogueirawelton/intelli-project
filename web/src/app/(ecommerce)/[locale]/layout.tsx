@@ -29,9 +29,7 @@ export default function LocaleLayout({
       <body className="scroll-smooth antialiased">
         <Header />
 
-        <main className="min-h-[calc(100vh-129px)] pt-20 lg:pt-28">
-          {children}
-        </main>
+        <main className="pt-20 lg:pt-28">{children}</main>
 
         <Newsletter />
         <Footer />

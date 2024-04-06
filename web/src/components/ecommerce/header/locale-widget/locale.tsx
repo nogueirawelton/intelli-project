@@ -18,6 +18,7 @@ export function Locale({ name, code }: LocaleProps) {
 
   return (
     <button
+      data-locale={code}
       className="flex items-center gap-2 h text-sm px-6 py-3 w-full transition-colors duration-500 hover:bg-zinc-100"
       onClick={handleLocaleChange}
     >

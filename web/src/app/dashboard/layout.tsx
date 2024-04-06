@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "Admin",
 };
 
-export default function LocaleLayout({
+export default function DashboardLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
