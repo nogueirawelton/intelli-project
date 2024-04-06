@@ -20,9 +20,10 @@ jobs:
 
       - name: Install dependencies
         run: npm ci
-
+        working-directory: web
       - name: Cypress run
         uses: cypress-io/github-action@v6
+        working-directory: web
         with:
           build: npm run build
           start: npm start
