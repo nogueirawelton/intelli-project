@@ -2,6 +2,7 @@
 
 import { Link, usePathname } from "@/intl/navigation";
 import { ComponentProps } from "react";
+import { twMerge } from "tailwind-merge";
 
 export function NavLink(props: ComponentProps<typeof Link>) {
   const pathname = usePathname();
@@ -10,7 +11,10 @@ export function NavLink(props: ComponentProps<typeof Link>) {
     <Link
       {...props}
       data-current={pathname == props.href}
-      className="uppercase lg:h-28 flex items-center data-[current=true]:text-white text-zinc-200 font-bold hover:text-white transition-colors duration-500"
+      className={twMerge(
+        "flex items-center font-bold text-zinc-200 transition-colors duration-500 hover:text-white data-[current=true]:text-white lg:h-28",
+        props.className,
+      )}
     />
   );
 }

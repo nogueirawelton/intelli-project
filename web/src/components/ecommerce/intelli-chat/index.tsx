@@ -2,7 +2,7 @@ import { Headphones } from "lucide-react";
 
 export function IntelliChat() {
   return (
-    <button className="h-16 w-16 grid fixed right-4 bottom-4 lg:right-8 lg:bottom-8  place-items-center rounded-full bg-zinc-800">
+    <button className="fixed bottom-4 right-4 grid h-16 w-16 place-items-center rounded-full bg-zinc-800 lg:bottom-8 lg:right-8">
       <Headphones className="h-8 w-8 text-white" />
     </button>
   );

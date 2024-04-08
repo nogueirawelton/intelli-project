@@ -4,7 +4,7 @@ import { Link } from "@/intl/navigation";
 import * as NavigationMenu from "@radix-ui/react-navigation-menu";
 import { ReactNode } from "react";
 
-interface DropDownMenu {
+interface DropDownMenuProps {
   children: ReactNode;
   items: Array<{
     name: string;
@@ -12,22 +12,21 @@ interface DropDownMenu {
   }>;
 }
 
-export function DropDownMenu({ children, items }: DropDownMenu) {
+export function DropDownMenu({ children, items }: DropDownMenuProps) {
   return (
     <NavigationMenu.Root>
       <NavigationMenu.List>
         <NavigationMenu.Item>
-          <NavigationMenu.Trigger>{children}</NavigationMenu.Trigger>
+          <NavigationMenu.Trigger className="flex items-center font-bold uppercase text-zinc-200 transition-colors duration-500 hover:text-white data-[current=true]:text-white lg:h-28">
+            {children}
+          </NavigationMenu.Trigger>
 
           <NavigationMenu.Content>
             {items.map(({ name, href }) => (
-              <NavigationMenu.Link
-                asChild
-                key={href}
-              >
+              <NavigationMenu.Link asChild key={href}>
                 <Link
                   href={href}
-                  className="flex items-center gap-2 px-6 py-3 w-full transition-colors duration-500 hover:bg-zinc-100 cursor-pointer text-zinc-700"
+                  className="flex w-full cursor-pointer items-center gap-2 px-6 py-3 text-zinc-700 transition-colors duration-500 hover:bg-zinc-100"
                 >
                   {name}
                 </Link>
@@ -37,7 +36,7 @@ export function DropDownMenu({ children, items }: DropDownMenu) {
         </NavigationMenu.Item>
       </NavigationMenu.List>
 
-      <NavigationMenu.Viewport className="data-[state=open]:animate-slide-down data-[state=closed]:animate-slide-up absolute max-w-[270px] w-full top-28 bg-white shadow-md" />
+      <NavigationMenu.Viewport className="absolute top-28 w-full max-w-[270px] bg-white shadow-md data-[state=closed]:animate-slide-up data-[state=open]:animate-slide-down" />
     </NavigationMenu.Root>
   );
 }

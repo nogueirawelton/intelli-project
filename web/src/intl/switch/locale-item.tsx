@@ -19,16 +19,16 @@ export function Locale({ name, code }: LocaleProps) {
   return (
     <button
       data-locale={code}
-      className="flex items-center gap-2 h text-sm px-6 py-3 w-full transition-colors duration-500 hover:bg-zinc-100"
+      className="h flex w-full items-center gap-2 px-6 py-3 text-sm transition-colors duration-500 hover:bg-zinc-100"
       onClick={handleLocaleChange}
     >
-      <div className="h-7 w-7 rounded-full overflow-hidden">
+      <div className="h-7 w-7 overflow-hidden rounded-full">
         <Image
           src={`/img/locales/${code}.jpg`}
           height={128}
           width={128}
           alt={code}
-          className="object-cover object-center w-auto h-full"
+          className="h-full w-auto object-cover object-center"
         />
       </div>
 
